@@ -4,22 +4,22 @@ const fs = require('fs')
  * Module Storage for nodbStore using fs (syncroneously)
  */
 class NoDBStorageFS {
-  
-  constructor(dbPath){
+
+  constructor(dbPath) {
     this.dbPath = dbPath
   }
-  
-  init(){
+
+  init() {
     if (!fs.existsSync(this.dbPath)) {
       this.export(this.dbPath)
     }
   }
 
-  write(json){
-    this.export(this.dbPath,json)
+  write(json) {
+    this.export(this.dbPath, json)
   }
 
-  load(){
+  load() {
     this.import(this.dbPath)
   }
 
@@ -27,7 +27,7 @@ class NoDBStorageFS {
    * import the database from a file 
    * @param string dbPath path of the db file
    */
-  import(dbPath){
+  import(dbPath) {
     this.nodb.loadJson(fs.readFileSync(dbPath))
     this.nodb._update_data()
   }
@@ -37,7 +37,7 @@ class NoDBStorageFS {
    * @param string dbPath path to the export file
    * @param string json data that will be exprted (used for this.write) ! dont fill it if you dont no what you do
    */
-  export(dbPath, json = this.nodb.toJson()){
+  export(dbPath, json = this.nodb.toJson()) {
     fs.writeFileSync(dbPath, json)
   }
 }
