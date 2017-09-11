@@ -1,0 +1,27 @@
+{
+  "name": "nodbstore-fs",
+  "version": "0.0.1-beta.0",
+  "description": "NoDbStore module to use a filesystem on it",
+  "main": "nodbstore-fs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Westixy/nodbstore-fs.git"
+  },
+  "keywords": [
+    "nodbstore",
+    "database",
+    "filesystem"
+  ],
+  "author": "Westixy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Westixy/nodbstore-fs/issues"
+  },
+  "homepage": "https://github.com/Westixy/nodbstore-fs#readme",
+  "dependencies": {
+    "nodbstore": "^0.0.1-beta"
+  }
+}
