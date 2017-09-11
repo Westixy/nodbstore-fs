@@ -1,6 +1,6 @@
 {
   "name": "nodbstore-fs",
-  "version": "0.0.1-beta.2",
+  "version": "0.0.1-beta.3",
   "description": "NoDbStore module to use a filesystem on it",
   "main": "nodbstore-fs.js",
   "scripts": {
@@ -21,7 +21,5 @@
     "url": "https://github.com/Westixy/nodbstore-fs/issues"
   },
   "homepage": "https://github.com/Westixy/nodbstore-fs#readme",
-  "dependencies": {
-    "nodbstore": "^0.0.1-beta"
-  }
+  "dependencies": {}
 }

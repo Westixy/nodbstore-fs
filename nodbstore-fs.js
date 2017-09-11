@@ -1,10 +1,9 @@
-const NoDB = require('nodbstore')
 const fs = require('fs')
 
 /**
  * Module Storage for nodbStore using fs (syncroneously)
  */
-class NoDBStorageFS extends NoDB.Storage {
+class NoDBStorageFS {
   
   constructor(dbPath){
     super()
@@ -31,6 +30,7 @@ class NoDBStorageFS extends NoDB.Storage {
    */
   import(dbPath){
     this.nodb.loadJson(fs.readFileSync(dbPath))
+    this.nodb._update_data()
   }
 
   /**
