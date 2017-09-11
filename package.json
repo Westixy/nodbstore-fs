@@ -1,6 +1,6 @@
 {
   "name": "nodbstore-fs",
-  "version": "0.0.1-beta.1",
+  "version": "0.0.1-beta.2",
   "description": "NoDbStore module to use a filesystem on it",
   "main": "nodbstore-fs.js",
   "scripts": {

@@ -13,7 +13,7 @@ class NoDBStorageFS extends NoDB.Storage {
   
   init(){
     if (!fs.existsSync(this.dbPath)) {
-      this.export()
+      this.export(this.dbPath)
     }
   }
 
