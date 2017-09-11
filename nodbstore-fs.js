@@ -22,14 +22,14 @@ class NoDBStorageFS extends NoDB.Storage {
   }
 
   load(){
-    this.import()
+    this.import(this.dbPath)
   }
 
   /**
    * import the database from a file 
    * @param string dbPath path of the db file
    */
-  import(dbPath = this.dbPath){
+  import(dbPath){
     this.nodb.loadJson(fs.readFileSync(dbPath))
   }
 
@@ -43,6 +43,4 @@ class NoDBStorageFS extends NoDB.Storage {
   }
 }
 
-NoDB.NoDBStorageFS = NoDBStorageFS
-
-module.exports = NoDB
+module.exports = NoDBStorageFS
