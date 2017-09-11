@@ -6,7 +6,6 @@ const fs = require('fs')
 class NoDBStorageFS {
   
   constructor(dbPath){
-    super()
     this.dbPath = dbPath
   }
   
