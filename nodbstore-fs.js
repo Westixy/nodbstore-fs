@@ -42,3 +42,7 @@ class NoDBStorageFS extends NoDB.Storage {
     fs.writeFileSync(dbPath, json)
   }
 }
+
+NoDB.NoDBStorageFS = NoDBStorageFS
+
+module.exports = NoDB
